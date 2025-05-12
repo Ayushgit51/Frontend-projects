@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix.clone</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .back {
+            background-color: black;
+        }
+
+        header {
+            height: 600px;
+            background-image: linear-gradient(black, transparent), url("https://wallpapercave.com/wp/wp1945909.jpg");
+            background-size: cover;
+            margin: 0px 20px;
+        }
+
+        .navbar {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            height: 60px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .btn button {
+            padding: 5px;
+            color: white;
+            background-color: transparent;
+            border-color: white;
+        }
+
+        .navbar .btn #btn2 {
+            background-color: red;
+        }
+
+        .midmain {
+            margin: 20vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            font-size: 1em;
+        }
+
+        .enjoy {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .join {
+            margin-bottom: 15px;
+        }
+
+        .ready {
+            margin-bottom: 15px;
+        }
+
+        #btnm2 {
+            padding: 5px 15px;
+            color: white;
+            background-color: red;
+            border-color: white;
+        }
+
+        .email input {
+            background-color: transparent;
+            filter: grayscale(1);
+            border-color: white;
+        }
+
+        .hero {
+            margin: 5vh 3vw;
+        }
+
+        .trnd {
+            display: flex;
+            flex-direction: column;
+            color: white;
+            font-size: large;
+            font-family: sans-serif;
+            height: 100px;
+            font-weight: bold;
+        }
+
+        .trnd select {
+            background-color: rgb(18, 17, 17);
+            color: white;
+            width: 100px;
+            padding: 10px 0;
+            margin: 10px 0;
+            margin-right: 30px;
+            font-size: medium;
+            border-radius: 4px;
+        }
+
+        .scrl {
+            max-height: 280px;
+            display: flex;
+            overflow-x: scroll;
+
+            scrollbar-color: black grey;
+        }
+
+        .hero .scrl .m1 {
+            height: 250px;
+            min-width: 160px;
+            background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/c3d6dd177846275.64ddb5d66067d.png");
+            background-size: cover;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .hero .scrl .m2 {
+            height: 250px;
+            min-width: 160px;
+            background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/f240a265478443.5af571f54fa36.jpg");
+            background-size: cover;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .hero .scrl .m3 {
+            height: 250px;
+            min-width: 160px;
+            background-image: url("https://m.media-amazon.com/images/M/MV5BZWZiNDM1ODQtMzM5MS00ZTU5LWFhMDYtNDc4MmRlZjkyMGY3XkEyXkFqcGdeQXVyMTA5NzIyMDY5._V1_.jpg");
+            background-size: cover;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .hero .scrl .m4 {
+            height: 250px;
+            min-width: 160px;
+            background-image: url("https://1.bp.blogspot.com/-_ykm0yEXS-8/XQp6uA3tubI/AAAAAAAAf4E/xS5r8_Iij2kknY2ky0QDJjfcIR3mzPQYACLcBGAs/s1600/Shadaa-Diljit-Dosanjh.jpg");
+            background-size: cover;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .hero .scrl .m5 {
+            height: 250px;
+            min-width: 160px;
+            background-image: url("https://3.bp.blogspot.com/-4Q4u3YHnL9g/WSV1pv4uf_I/AAAAAAAANZ0/31EXVH9wOu84bHKkC0o3hxrMfYVQi7-hwCLcB/s1600/tabadala-bhojpuri-film-poster-release-date-news-mt-wiki.jpg");
+            background-size: cover;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .hero .scrl .m6 {
+            height: 250px;
+            min-width: 160px;
+            background-image: url("http://webneel.com/daily/sites/default/files/images/daily/08-2018/21-indian-movie-poster-design-100daysoflove.jpg");
+            background-size: cover;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .hero .scrl .m7 {
+            height: 250px;
+            min-width: 160px;
+            background-image: url("http://5.imimg.com/data5/CO/IP/MQ/SELLER-30220222/bollywood-wall-poster-500x500.jpg");
+            background-size: cover;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .hero .scrl .m8 {
+            height: 250px;
+            min-width: 160px;
+            background-image: url("https://m.media-amazon.com/images/M/MV5BMTQ3MzU4MjU0NV5BMl5BanBnXkFtZTgwMzU3NjQ2NjE@._V1_.jpg");
+            background-size: cover;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .hero .scrl .m9 {
+            height: 250px;
+            min-width: 160px;
+            background-image: url("https://www.indiewire.com/wp-content/uploads/2019/12/JokerPoster1200_5ca3c435318d42.29270548.jpg?w=800");
+            background-size: cover;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .hero .scrl .m10 {
+            height: 250px;
+            min-width: 160px;
+            background-image: url("https://i.pinimg.com/736x/b6/54/35/b65435b4683f2fea26e0b66bea2e94e3.jpg");
+            background-size: cover;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cntnA {
+            display: flex;
+            justify-content: space-evenly;
+            height: 35vh;
+            margin: 5vh 3vw;
+            background-color: rgb(18, 17, 17);
+            padding: 10px 20px;
+            align-items: center;
+            border-radius: 5px;
+        }
+
+        .about {
+            margin-left: 10px;
+            margin-top: 60x;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        .heading {
+            font-size: xx-large;
+            font-weight: bold;
+        }
+
+        .qus {
+            display: flex;
+            flex-direction: column;
+            color: white;
+            font-size: large;
+            font-family: sans-serif;
+            margin: 0 100px;
+        }
+
+        .qs1 {
+            height: 80px;
+            background-color: rgb(49, 49, 49);
+            color: white;
+            padding: 0 20px;
+            margin: 5px 0;
+            font-size: large;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .ft1 {
+            margin: 8vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            font-size: 1em;
+        }
+
+        .ft2 {
+            margin: 30px 0;
+
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .ft2a {
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer {
+            color: rgb(82, 88, 92);
+            margin-bottom: 60px;
+        }
+
+        .ft2a a {
+            color: rgb(82, 88, 92);
+            text-decoration: none;
+        }
+
+        .lang select {
+            background-color: transparent;
+            width: 100px;
+            height: 40px;
+            color: white;
+            padding: 10px;
+            align-items: center;
+            border: 2px solid white;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        @media screen and (max-width: 685px) {
+            header {
+                height: 600px;
+            }
+
+            .midmain {
+                margin: 90px 40px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+                font-size: 0.8em;
+            }
+
+            .enjoy {
+                font-size: 2em;
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+
+            .join {
+                margin-bottom: 12px;
+            }
+
+            .ready {
+                margin-bottom: 12px;
+            }
+
+            #btnm2 {
+                margin-top: 5px;
+                margin-left: 30px;
+                padding: 5px 15px;
+                color: white;
+                background-color: red;
+                border-color: white;
+            }
+
+            .trnd {
+                height: 150px;
+            }
+
+            .trnd select {
+                background-color: rgb(18, 17, 17);
+                color: white;
+                width: 100%;
+                display: flex;
+                padding: 10px 0;
+                margin: 10px 0;
+                margin-right: 30px;
+                font-size: medium;
+                border-radius: 4px;
+            }
+
+            .cntnA {
+                height: 70vh;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .cntnA .img1 img {
+                width: 240px;
+            }
+
+            .qus{
+                margin: 0 60px;
+            }
+
+            .qs1{
+                height: 100px;
+            }
+
+            .ft1 {
+            margin: 8vh 6vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            font-size: 1em;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="back">
+        <header>
+            <div class="navbar">
+                <div class="logo"><img width="150px" height="100px" src="https://img.icons8.com/?size=100&id=20519&format=png&color=000000" alt=""></div>
+                <div class="btn">
+                    <button id="btn1">English</button>
+                    <button id="btn2">Sign in</button>
+                </div>
+            </div>
+
+            <div class="midmain">
+                <div class="enjoy">Enjoy big movies, hit series and more from ₹ 149.</div>
+                <div class="join"> Join today. Cancel anytime.</div>
+                <div class="ready">Ready to watch? Enter your email to create or restart your membership.</div>
+                <div class="email">
+                    <input type="text" placeholder="Email Address">
+                    <button id="btnm2">Get Started></button>
+                </div>
+            </div>
+        </header>
+
+        <div class="hero">
+            <div class="trnd">
+                Trending Now
+                <div class="trnd1">
+                    <select>
+                        <option value="India">India</option>
+                        <option value="Global">Global</option>
+                    </select>
+                    <select>
+                        <option value="Movies">Movies</option>
+                        <option value="TV Shows">TV Shows</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="scrl">
+                <div class="m1">
+
+                </div>
+                <div class="m2">
+
+                </div>
+                <div class="m3">
+
+                </div>
+                <div class="m4">
+
+                </div>
+                <div class="m5">
+
+                </div>
+                <div class="m6">
+
+                </div>
+                <div class="m7">
+
+                </div>
+                <div class="m8">
+
+                </div>
+                <div class="m9">
+
+                </div>
+                <div class="m10">
+
+                </div>
+
+            </div>
+        </div>
+
+        <main>
+            <div class="cntnA">
+                <div class="about">
+                    <div class="heading">Spider-Man: Homecoming</div>
+                    <div class="text">Peter Parker returns to routine life as a high schooler until the Vulture's
+                        arrival gives him the chance to prove himself as a web-slinging superhero.
+                    </div>
+                </div>
+                <div class="img1"><img width="500em" height="220em" src="https://cdn.fansided.com/wp-content/blogs.dir/308/files/2017/07/Spider-Man_Homecoming_Poster_Landscape.jpg" alt=""></div>
+            </div>
+
+            <div class="cntnA">
+                <div class="img1"><img width="450px" height="220px" src="https://www.belloflostsouls.net/wp-content/uploads/2022/11/avatar-the-way-of-water-poster-crop.jpg" alt=""></div>
+                <div class="about">
+                    <div class="heading">Avatar: The Way of Water</div>
+                    <div class="text">On an alien planet, a former Marine falls in love with a blue-skinned warrior.
+                    </div>
+                </div>
+            </div>
+
+            <div class="cntnA">
+                <div class="about">
+                    <div class="heading">Chennai Express</div>
+                    <div class="text">A man travelling to Rameswaram via Chennai express for his late grandfather's
+                        ashes immersion finds himself in trouble after helping a don's daughter and her cousins board
+                        the train.
+                    </div>
+                </div>
+                <div class="img1"><img width="450px" height="220px" src="https://i.ytimg.com/vi/lKeYDL39EIU/maxresdefault.jpg" alt=""></div>
+            </div>
+
+            <div class="cntnA">
+                <div class="img1"><img width="450px" height="220px" src="https://cdn.wallpapersafari.com/13/55/F6bVx8.jpg" alt=""></div>
+                <div class="about">
+                    <div class="heading">End Game</div>
+                    <div class="text">Facing an inevitable outcome, terminally ill patients meet extraordinary medical
+                        practitioners seeking to change our approach to life and death.
+                    </div>
+                </div>
+            </div>
+
+            <div class="cntnA">
+                <div class="about">
+                    <div class="heading">Yeh Jawaani Hai Deewan</div>
+                    <div class="text">On a trekking trip, an introvert falls for a charming ex-classmate, whose thirst
+                        for adventure drives them apart. Years later, their paths cross again.
+                    </div>
+                </div>
+                <div class="img1"><img width="450px" height="220px" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/c7394644803089.581f0542a5a97.png" alt=""></div>
+            </div>
+
+            <div class="cntnA">
+                <div class="img1"><img width="450px" height="220px" src="https://static.javatpoint.com/movie-reviews/images/major-movie-review.png" alt=""></div>
+                <div class="about">
+                    <div class="heading">Major (Hindi)</div>
+                    <div class="text">This biopic follows the life of Indian Army officer Major Sandeep Unnikrishnan,
+                        from his childhood to his heroic actions during the 2008 Mumbai attacks.
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="qus">
+            <b>Frequently Asked Questions</b>
+            <div class="qs1">
+                <p>What is Netflix?</p>
+                <p>+</p>
+            </div>
+            <div class="qs1">
+                <p>How much does Netflix cost?</p>
+                <p>+</p>
+            </div>
+            <div class="qs1">
+                <p>Where can I watch?</p>
+                <p>+</p>
+            </div>
+            <div class="qs1">
+                <p>How do I cancel?</p>
+                <p>+</p>
+            </div>
+            <div class="qs1">
+                <p>What can I watch on Netflix?</p>
+                <p>+</p>
+            </div>
+            <div class="qs1">
+                <p>Is Netflix good for kids?</p>
+                <p>+</p>
+            </div>
+            <div class="ft1">
+                <div class="ready">Ready to watch? Enter your email to create or restart your membership.</div>
+                <div class="email">
+                    <input type="text" placeholder="Email Address">
+                    <button id="btnm2">Get Started></button>
+                </div>
+            </div>
+
+            <footer>
+
+                <div class="ftp">Questions? Call 000-800-919-1743</div>
+
+                <div class="ft2">
+                    <div class="ft2a">
+                        <a href="#">FAQ</a>
+                        <a href="#">Help Centre</a>
+                        <a href="#">Account</a>
+                        <a href="#">Media Centre</a>
+                    </div>
+                    <div class="ft2a">
+                        <a href="#">Investor Relations</a>
+                        <a href="#">Jobs</a>
+                        <a href="#">Ways to Watch</a>
+                        <a href="#">Terms of Use</a>
+                    </div>
+                    <div class="ft2a">
+                        <a href="#">Privacy</a>
+                        <a href="#">Cookie Preferences</a>
+                        <a href="#">Corporate Information</a>
+                        <a href="#">Contact Us</a>
+                    </div>
+                    <div class="ft2a">
+                        <a href="#">Speed Test</a>
+                        <a href="#">Legal Notices</a>
+                        <a href="#">Only on Netflix</a>
+                    </div>
+                </div>
+
+                <div class="lang">
+                    <select>
+                        <option value="English">English</option>
+                        <option value="Hindi">Hindi</option>
+                    </select>
+                </div>
+                <small>Netflix India</small>
+            </footer>
+        </div>
+</body>
+
+</html>

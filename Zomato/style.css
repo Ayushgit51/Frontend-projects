@@ -1,0 +1,158 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #e23744; /* Red theme */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+}
+
+header .logo img {
+    width: 120px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #f1c40f; /* Yellowish hover effect */
+}
+
+/* Main section styling */
+main {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+main section {
+    margin-bottom: 50px;
+}
+
+main section:first-child {
+    background-image: url('bg.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 20px;
+    position: relative;
+}
+
+main section:first-child::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+    z-index: -1;
+}
+
+main section:first-child img {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+main section:first-child p {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+main section:first-child input {
+    padding: 15px;
+    width: 50%;
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+    margin-top: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+main section:first-child input:focus {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Second section about food delivery */
+main section:nth-child(2) {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: left;
+}
+
+main section:nth-child(2) h2 {
+    color: #e23744;
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-align: center;
+}
+
+main section:nth-child(2) p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    text-align: center;
+    color: #555;
+}
+
+/* Icons section */
+.icon-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.icon-grid .icon {
+    width: 150px;
+    text-align: center;
+}
+
+.icon-grid .icon img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.icon-grid .icon p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #e23744; /* Same red color */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
